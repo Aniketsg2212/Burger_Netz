@@ -1,0 +1,163 @@
+{
+  "design_system": {
+    "name": "BurgerNetz Civic Canvas",
+    "description": "A design system that bridges the gap between bureaucratic trust and community warmth. It uses a 'Swiss Utility' foundation (clean grids, high legibility) mixed with 'Organic Community' accents (warm photography, soft shadows).",
+    "theme_strategy": "light_mode_primary",
+    "typography": {
+      "font_family": {
+        "headings": "Manrope, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-6xl font-bold tracking-tight leading-tight",
+        "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+        "h3": "text-2xl font-semibold tracking-normal",
+        "body_large": "text-lg leading-relaxed",
+        "body_base": "text-base leading-relaxed",
+        "caption": "text-sm text-muted-foreground uppercase tracking-wider"
+      },
+      "imports": [
+        "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');"
+      ]
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "name": "Municipal Blue",
+          "hex": "#0F172A",
+          "tailwind": "bg-slate-900 text-white hover:bg-slate-800"
+        },
+        "secondary": {
+          "name": "Action Orange",
+          "hex": "#F97316",
+          "tailwind": "bg-orange-500 text-white hover:bg-orange-600"
+        },
+        "accent": {
+          "name": "Resolution Green",
+          "hex": "#10B981",
+          "tailwind": "text-emerald-600 bg-emerald-50 border-emerald-200"
+        },
+        "background": {
+          "page": "#F8FAFC",
+          "card": "#FFFFFF",
+          "tailwind_page": "bg-slate-50",
+          "tailwind_card": "bg-white"
+        },
+        "text": {
+          "main": "#0F172A",
+          "muted": "#64748B",
+          "tailwind_main": "text-slate-900",
+          "tailwind_muted": "text-slate-500"
+        }
+      },
+      "gradients": {
+        "hero_overlay": "bg-gradient-to-b from-slate-900/0 via-slate-900/5 to-slate-900/20",
+        "subtle_glow": "bg-gradient-to-tr from-blue-50 to-orange-50"
+      }
+    },
+    "layout": {
+      "spacing_scale": "Generous. Use p-6, p-8, p-12 for containers. Gap-6 or Gap-8 for grids.",
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "radius": "rounded-lg",
+      "grids": {
+        "marketing_bento": "grid grid-cols-1 md:grid-cols-12 gap-6",
+        "dashboard_dense": "grid grid-cols-1 md:grid-cols-4 gap-4"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "h-11 px-8 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-sm hover:shadow-md font-medium",
+        "secondary": "h-11 px-8 rounded-lg border-2 border-slate-200 bg-transparent text-slate-900 hover:border-slate-900 transition-colors font-medium",
+        "ghost": "hover:bg-slate-100 text-slate-600 hover:text-slate-900"
+      },
+      "cards": {
+        "base": "bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200",
+        "interactive": "cursor-pointer hover:border-slate-300 hover:ring-2 hover:ring-slate-100 transition-all"
+      },
+      "inputs": {
+        "base": "h-11 rounded-lg border-slate-200 bg-white focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all"
+      },
+      "badges": {
+        "status_pending": "bg-orange-100 text-orange-700 border-orange-200",
+        "status_progress": "bg-blue-100 text-blue-700 border-blue-200",
+        "status_resolved": "bg-emerald-100 text-emerald-700 border-emerald-200"
+      }
+    },
+    "visual_enhancers": {
+      "shadows": {
+        "soft": "shadow-[0_2px_8px_rgba(15,23,42,0.08)]",
+        "float": "shadow-[0_12px_24px_rgba(15,23,42,0.12)]"
+      },
+      "textures": {
+        "noise": "opacity-40 mix-blend-overlay pointer-events-none fixed inset-0 z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
+      }
+    },
+    "assets": {
+      "images": [
+        {
+          "category": "hero_community",
+          "url": "https://images.unsplash.com/photo-1717224157584-af2f29f523b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGRpdmVyc2UlMjBjaXRpemVucyUyMGNpdHklMjBwYXJrfGVufDB8fHx8MTc2OTA5MTg1Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "Diverse group of citizens in a park, representing community unity.",
+          "usage": "Hero section background or main landing image"
+        },
+        {
+          "category": "issue_pothole",
+          "url": "https://images.unsplash.com/photo-1675430427954-2a1c9c8e4a06?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxwb3Rob2xlJTIwaW4lMjBhc3BoYWx0JTIwcm9hZHxlbnwwfHx8fDE3NjkwOTE4NTR8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Pothole in asphalt road.",
+          "usage": "Issue reporting category card or example report"
+        },
+        {
+          "category": "issue_lighting",
+          "url": "https://images.unsplash.com/photo-1629890113575-0a0c33b43e76?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwyfHxicm9rZW4lMjBzdHJlZXQlMjBsaWdodCUyMG5pZ2h0fGVufDB8fHx8MTc2OTA5MTg1Nnww&ixlib=rb-4.1.0&q=85",
+          "description": "Street light at night.",
+          "usage": "Issue reporting category card or example report"
+        },
+        {
+          "category": "issue_garbage",
+          "url": "https://images.unsplash.com/photo-1762187547870-83fbeef1afcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxvdmVyZmxvd2luZyUyMGdhcmJhZ2UlMjBiaW4lMjBjaXR5JTIwc3RyZWV0fGVufDB8fHx8MTc2OTA5MTg1OHww&ixlib=rb-4.1.0&q=85",
+          "description": "Overflowing garbage bins.",
+          "usage": "Issue reporting category card or example report"
+        }
+      ],
+      "icons": {
+        "library": "lucide-react",
+        "style": "Stroke width 1.5px or 2px. Consistent sizing (w-5 h-5 for UI, w-8 h-8 for features)."
+      }
+    },
+    "motion": {
+      "transitions": "transition-all duration-200 ease-out",
+      "hover_lift": "hover:-translate-y-1 hover:shadow-md",
+      "page_enter": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+    },
+    "accessibility": {
+      "contrast": "Ensure all text meets WCAG AA. Use slate-900 for main text on slate-50 backgrounds.",
+      "focus_states": "focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2",
+      "labels": "All inputs must have visible labels or aria-labels."
+    }
+  },
+  "instructions_to_main_agent": {
+    "setup": [
+      "Install 'lucide-react' and 'recharts' if not present.",
+      "Update 'tailwind.config.js' to extend the font family with Manrope and Inter.",
+      "Add the Google Fonts import to 'index.css'."
+    ],
+    "implementation_rules": [
+      "Use the 'Manrope' font for all headings (h1-h3).",
+      "Use 'Inter' for all body text.",
+      "Do NOT use default Shadcn card styles blindly. Remove the 'card' class if it conflicts with the custom 'cards.base' style defined above.",
+      "For the Map View: Use 'react-leaflet' or similar. Style the map container with 'rounded-lg overflow-hidden border border-slate-200 shadow-sm'.",
+      "For the Dashboard: Use the 'dashboard_dense' grid layout. Keep widgets compact.",
+      "For the Landing Page: Use the 'marketing_bento' grid. Make it visual and spacious.",
+      "Use the provided image URLs for the respective sections. Do not use placeholders.",
+      "Ensure the 'Report Issue' form is split into clear steps or has distinct sections (Location, Details, Photo) to avoid overwhelming the user."
+    ]
+  },
+  "universal_guidelines": [
+    "Do not use generic centered layouts. Use asymmetry where possible.",
+    "Avoid 'AI slop' gradients. Use solid colors or very subtle, purposeful gradients.",
+    "Add 'data-testid' to all interactive elements.",
+    "Use 'sonner' for all toast notifications.",
+    "Ensure mobile responsiveness for all grids (stack to single column on mobile)."
+  ]
+}

@@ -1,0 +1,68 @@
+/* BurgerNetz Custom Styles */
+
+/* Status badge colors */
+.status-pending {
+    @apply bg-orange-100 text-orange-700 border-orange-200;
+}
+
+.status-in_progress {
+    @apply bg-blue-100 text-blue-700 border-blue-200;
+}
+
+.status-resolved {
+    @apply bg-emerald-100 text-emerald-700 border-emerald-200;
+}
+
+/* Category icons background */
+.category-pothole {
+    @apply bg-amber-500;
+}
+
+.category-streetlight {
+    @apply bg-yellow-400;
+}
+
+.category-garbage {
+    @apply bg-green-500;
+}
+
+.category-graffiti {
+    @apply bg-purple-500;
+}
+
+.category-other {
+    @apply bg-slate-500;
+}
+
+/* Card hover effects */
+.card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-1;
+}
+
+/* Button styles */
+.btn-primary {
+    @apply h-11 px-8 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-sm hover:shadow-md font-medium;
+}
+
+.btn-secondary {
+    @apply h-11 px-8 rounded-lg border-2 border-slate-200 bg-transparent text-slate-900 hover:border-slate-900 transition-colors font-medium;
+}
+
+.btn-accent {
+    @apply h-11 px-8 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-all shadow-sm hover:shadow-md font-medium;
+}
+
+/* Input styles */
+.input-base {
+    @apply h-11 rounded-lg border-slate-200 bg-white focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all;
+}
+
+/* Map marker popup */
+.leaflet-popup-content-wrapper {
+    border-radius: 0.5rem;
+    padding: 0;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+}
