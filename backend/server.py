@@ -19,7 +19,7 @@ import sqlite3
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-DB_PATH = ROOT_DIR / 'burgernetz.db'
+DB_PATH = Path('/tmp/burgernetz.db')
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'burgernetz-secret-key-2024')
 JWT_ALGORITHM = 'HS256'
