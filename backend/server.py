@@ -1,4 +1,6 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, UploadFile, File
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 import os
@@ -332,6 +334,16 @@ def health():
     return {"status": "healthy"}
 
 app.include_router(api_router)
+
+# Serve frontend static files if they exist
+frontend_build = Path(__file__).parent.parent / 'frontend' / 'build'
+if frontend_build.exists():
+    app.mount("/static", StaticFiles(directory=str(frontend_build / 'static')), name="static")
+
+    @app.get("/{full_path:path}")
+    def serve_frontend(full_path: str):
+        index = frontend_build / 'index.html'
+        return FileResponse(str(index))
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
