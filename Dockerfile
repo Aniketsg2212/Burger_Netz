@@ -19,4 +19,5 @@ COPY --from=frontend-build /app/frontend/build ./frontend/build
 EXPOSE 8000
 
 WORKDIR /app/backend
-CMD uvicorn server:app --host 0.0.0.0 --port $PORT
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["uvicorn server:app --host 0.0.0.0 --port ${PORT:-8000}"]
